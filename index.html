@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="gen.js"></script>
+    <style>
+    * {
+        padding: 1;
+        margin: 2;
+    }
+    #form1 {
+        width: 800px;
+    }
+    </style>
+</head>
+<body onload="main()">
+    <button onclick="regen()">generate terrain</button>
+    <form id="form1" action="">
+        n: <input type="number" min="0" max="12" name="n" value="6">
+        samples: <input type="number" min="40" max="200" name="samples" value="100">
+        scale y-axis: <input type="number" min="10" max="100" name="scaleY" value="40">
+        max deviation y-axis: <input type="number" min="0" max="20" name="maxDevY" value="3"> 
+        max deviation x-axis: <input type="number" min="0" max="20" name="maxDevX" value="1">
+        num landing zones: <input type="number" min="0" max="6" name="numZones" value="4">
+        x5 zone width (pixels): <input type="number" min="1" max="50" name="x5Width" value="30">
+        x3 zone width (pixels): <input type="number" min="1" max="50" name="x3Width" value="40">
+        x2 zone width (pixels): <input type="number" min="1" max="50" name="x2Width" value="50">
+    </form>
+    <div id="canvas-div">
+
+    </div>
+</body>
+</html>
