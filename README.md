@@ -1,37 +1,22 @@
-## Welcome to GitHub Pages
+# A Simple Method of Terrain Generation for Lunar Lander
 
-You can use the [editor on GitHub](https://github.com/zombie-snail/lunar-lander-terrain-generation/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+Note: This is an experimental method of generating lunar lander like terrain. There are probably better ways to do this. 
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Terrain base shape is generated as the random superposition of trigonometric functions of the form:
 
-### Markdown
+ $$\sum_{i=1}^{n} a_{i}sin(ix)+b_{i}cos(ix)$$
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+ $$a_{i}=\left \{ 0,1 \right\}$$ $$b_{i}=\left \{ 0,1 \right\}$$ 
 
-```markdown
-Syntax highlighted code block
+ $a_{i}$ and $b_{i}$ are randomly generated terms for each value of $i$. The limit of the sum $n$ determines how many different variations of base shape are possible, which is given by $2^{2n}$. Further, the product $ix$ is the frequency of the trig function, thus larger values of $n$ produce narrower peaks.
 
-# Header 1
-## Header 2
-### Header 3
+ The terrain is then created by sampling the base shape function for a set of $x$ values and can be rendered as a connected set of lines. To make the terrain more natural looking random deviations can be applied to the sampled values to give it a rougher look.
 
-- Bulleted
-- List
+ Try it out here...
 
-1. Numbered
-2. List
+ https://zombie-snail.github.io/lunar-lander-terrain-generation/
 
-**Bold** and _Italic_ and `Code` text
+ # License
 
-[Link](url) and ![Image](src)
-```
+ Dont care! Do with it as you please.
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/zombie-snail/lunar-lander-terrain-generation/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
