@@ -14,9 +14,5 @@ Terrain base shape is generated as the random superposition of trigonometric fun
 
  Try it out here...
 
- https://zombie-snail.github.io/lunar-lander-terrain-generation/
-
- # License
-
- Dont care! Do with it as you please.
+ https://imurf.github.io/lunar-lander-terrain-generation/
 
